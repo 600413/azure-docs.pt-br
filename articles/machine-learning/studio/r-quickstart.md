@@ -385,7 +385,7 @@ Vamos executar esse código e examinar o log de saída para o script R. Os dados
 
 O tipo de Mês deve agora indicar '**Fator c/ 14 níveis**'. Isso é um problema, pois há apenas 12 meses no ano. Você também pode verificar se o tipo em **Visualizar** da porta do Conjunto de dados de resultado é “**Categórico**”.
 
-O problema é que a coluna “Month” não foi codificada sistematicamente. Em alguns casos, um mês é chamado de abril e, em outros, é abreviado como abril. Podemos pode resolver esse problema cortando a cadeia de caracteres para três caracteres. Agora, a linha de código deve ser assim:
+O problema é que a coluna “Month” não foi codificada sistematicamente. Em alguns casos, um mês é chamado de abril e, em outros, é abreviado como abr. Podemos pode resolver esse problema cortando a cadeia de caracteres para três caracteres. Agora, a linha de código deve ser assim:
 
     ## Ensure the coding is consistent and convert column to a factor
     cadairydata$Month <- as.factor(substr(cadairydata$Month, 1, 3))
